@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+          }
+    </style>
+     <h1> welcome to my blog page!</h1>
+     <img src="sam.jpg" alt="picture" width ="70" height=" 100"/>
+
+     <p> hey, my name is Bhandari Samyak Lalit and I'm currently prusing in B.TECH Degree from WIT solapur.
+        I am passionate learner and a tech enthusiast. I love to leran new things and talk with friends and share 
+        my knowledge with you all through this blog.<span id="dots">...</span><span id="more">
+
+    </span> </p>
+    <table class="tb" id="mytable">
+        <tr>
+          <th>Semester</th>
+          <th>Percentage</th>
+          <th>CGPA</th>
+        </tr>
+        <tr>
+          <td>First</td>
+          <td>65.08%</td>
+          <td>7.47</td>
+        </tr>
+        <tr>
+          <td>Second</td>
+          <td>68.14%</td>
+          <td>8.39</td>
+        </tr>
+        <tr>
+          <td>Third</td>
+          <td>57.71%</td>
+          <td>7.42</td>
+        </tr>
+      </table>
+      <br>
+      
+      <button onclick="toggle(this);">Hide table</button>
+    
+
+    <script >
+        
+  let toggle = button => {
+    let element = document.getElementById("mytable");
+    let hidden = element.getAttribute("hidden");
+
+    if (hidden) {
+       element.removeAttribute("hidden");
+       button.innerText = "Hide table";
+    } else {
+       element.setAttribute("hidden", "hidden");
+       button.innerText = "Show table";
+    }
+  }
+    </script>
+
+
+
+
+
+</body>
+</html>
