@@ -1,72 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Samyak's Personal Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 20px;
+      margin: 10px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      margin-bottom: 15px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .gallery img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+
+    .btn {
+      background: #555;
+      border: none;
+      color: white;
+      font-size: 16px;
+      padding: 10px 15px;
+      margin-top: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .btn:hover {
+      background: #777;
+      transform: scale(1.05);
+    }
+
+    .music-player {
+      background: #1e1e1e;
+      color: white;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .controls button {
+      background: #444;
+      color: white;
+      font-size: 24px;
+      padding: 10px 15px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+
+    img.profile-pic {
+      width: 70px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
-    <style>
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-          }
-    </style>
-     <h1> welcome to my blog page!</h1>
-     <img src="sam.jpg" alt="picture" width ="70" height=" 100"/>
 
-     <p> hey, my name is Bhandari Samyak Lalit and I'm currently prusing in B.TECH Degree from WIT solapur.
-        I am passionate learner and a tech enthusiast. I love to leran new things and talk with friends and share 
-        my knowledge with you all through this blog.<span id="dots">...</span><span id="more">
+  <header>
+    <h1>Welcome to Samyak's Website</h1>
+    <nav>
+      <ul>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#subjects">Subjects</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#music">Music</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    </span> </p>
-    <table class="tb" id="mytable">
-        <tr>
-          <th>Semester</th>
-          <th>Percentage</th>
-          <th>CGPA</th>
-        </tr>
-        <tr>
-          <td>First</td>
-          <td>65.08%</td>
-          <td>7.47</td>
-        </tr>
-        <tr>
-          <td>Second</td>
-          <td>68.14%</td>
-          <td>8.39</td>
-        </tr>
-        <tr>
-          <td>Third</td>
-          <td>57.71%</td>
-          <td>7.42</td>
-        </tr>
-      </table>
-      <br>
-      
-      <button onclick="toggle(this);">Hide table</button>
-    
+  <section id="blog">
+    <h2>Blog Introduction</h2>
+    <img src="sam.jpg" alt="Samyak's Picture" class="profile-pic"/>
+    <p>
+      Hey, my name is <strong>Bhandari Samyak Lalit</strong> and I'm currently pursuing a B.Tech degree from WIT Solapur.
+      I am a passionate learner and tech enthusiast. I love to learn new things, talk with friends, and share
+      my knowledge with you all through this blog.
+    </p>
+    <br>
+    <table id="mytable">
+      <tr>
+        <th>Semester</th>
+        <th>Percentage</th>
+        <th>CGPA</th>
+      </tr>
+      <tr>
+        <td>First</td>
+        <td>65.08%</td>
+        <td>7.47</td>
+      </tr>
+      <tr>
+        <td>Second</td>
+        <td>68.14%</td>
+        <td>8.39</td>
+      </tr>
+      <tr>
+        <td>Third</td>
+        <td>57.71%</td>
+        <td>7.42</td>
+      </tr>
+    </table>
+    <button class="btn" onclick="toggleTable(this)">Hide table</button>
+  </section>
 
-    <script >
-        
-  let toggle = button => {
-    let element = document.getElementById("mytable");
-    let hidden = element.getAttribute("hidden");
+  <section id="skills">
+    <h2>Academic Skills</h2>
+    <p>My skills are C, C++, Python, and Data Structures.</p>
+  </section>
 
-    if (hidden) {
-       element.removeAttribute("hidden");
-       button.innerText = "Hide table";
-    } else {
-       element.setAttribute("hidden", "hidden");
-       button.innerText = "Show table";
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>Project 1: <a href="#">Link to project</a></li>
+      <li>Project 2: <a href="#">Link to project</a></li>
+      <li>Project 3: <a href="#">Link to project</a></li>
+    </ul>
+  </section>
+
+  <section id="subjects">
+    <h2>Learned Subjects</h2>
+    <ul>
+      <li>Computer Networks</li>
+      <li>Information System and Management</li>
+      <li>Microcontroller</li>
+    </ul>
+  </section>
+
+  <section id="gallery">
+    <h2>Photos & Certificates</h2>
+    <div class="gallery">
+      <img src="cert1.png" alt="Certificate 1">
+      <img src="cert2.png" alt="Certificate 2">
+      <img src="cert3.png" alt="Certificate 3">
+    </div>
+  </section>
+
+  <section id="hobbies">
+    <h2>Hobbies</h2>
+    <ul>
+      <li>Reading Books</li>
+      <li>Travelling</li>
+      <li>Photography</li>
+    </ul>
+  </section>
+
+  <section id="music" class="music-player">
+    <h2 id="song-title">Song Title</h2>
+    <audio id="audio" src=""></audio>
+    <div class="controls">
+      <button id="prev">⏮</button>
+      <button id="play">▶</button>
+      <button id="next">⏭</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Samyak Lalit | All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle Table
+    function toggleTable(button) {
+      const table = document.getElementById("mytable");
+      if (table.hasAttribute("hidden")) {
+        table.removeAttribute("hidden");
+        button.innerText = "Hide table";
+      } else {
+        table.setAttribute("hidden", "hidden");
+        button.innerText = "Show table";
+      }
     }
-  }
-    </script>
 
+    // Music Player
+    const audio = document.getElementById('audio');
+    const playBtn = document.getElementById('play');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    const songTitle = document.getElementById('song-title');
 
+    const songs = [
+      { name: "Song 1", file: "song1.mp3" },
+      { name: "Song 2", file: "song2.mp3" },
+      { name: "Song 3", file: "song3.mp3" }
+    ];
 
+    let songIndex = 0;
+    let isPlaying = false;
 
+    function loadSong(index) {
+      audio.src = songs[index].file;
+      songTitle.innerText = songs[index].name;
+    }
 
+    function playSong() {
+      audio.play();
+      isPlaying = true;
+      playBtn.innerText = '⏸';
+    }
+
+    function pauseSong() {
+      audio.pause();
+      isPlaying = false;
+      playBtn.innerText = '▶';
+    }
+
+    function togglePlay() {
+      isPlaying ? pauseSong() : playSong();
+    }
+
+    function nextSong() {
+      songIndex = (songIndex + 1) % songs.length;
+      loadSong(songIndex);
+      playSong();
+    }
+
+    function prevSong() {
+      songIndex = (songIndex - 1 + songs.length) % songs.length;
+      loadSong(songIndex);
+      playSong();
+    }
+
+    playBtn.addEventListener('click', togglePlay);
+    nextBtn.addEventListener('click', nextSong);
+    prevBtn.addEventListener('click', prevSong);
+
+    // Load the first song initially
+    loadSong(songIndex);
+  </script>
 </body>
 </html>
